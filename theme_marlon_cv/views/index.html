@@ -6,14 +6,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="keywords" content="odooo,developer">
+    <meta name="description" content="Marlon Falcón Hernández">
 
     <title>Marlon Falcón | Odoo Developer</title>
+    <link type="image/x-icon" rel="shortcut icon" href="/web/static/src/img/favicon.ico"/>
 
     <!-- FAVICON AND APPLE TOUCH -->
-    <link rel="shortcut icon" href="favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-180x180.png">
     <meta name="msapplication-TileImage" content="mstile.png">
     <meta name="msapplication-TileColor" content="#6e14c9">
     <meta name="theme-color" content="#6e14c9">
@@ -41,7 +40,8 @@
     <link rel="stylesheet" href="theme_marlon_cv/static/assets/css/pages-style.css">
 
     <!-- Start of  Zendesk Widget script -->
-<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=28df0e46-28b6-49a7-8c82-76908249a0cc"> </script>
+
+        <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=28df0e46-28b6-49a7-8c82-76908249a0cc"> </script>
 <!-- End of  Zendesk Widget script -->
 
 </head>
@@ -75,7 +75,11 @@
                             </li>
                         </ul>
 
-                        <a class="btn btn-style-1 waves mt-lg-0 mb-lg-0 mr-xl-4" href="#">Contactar</a>
+                        <button  data-toggle="modal" data-target="#exampleModal"
+                                 class="btn btn-style-1 waves mt-lg-0 mb-lg-0 mr-xl-4">Contactar</button>
+
+
+
 
                     </div><!-- col -->
                 </div><!-- row -->
@@ -88,8 +92,8 @@
                         <div class="personal-info style-3 mb-0">
                             <div class="personal-details">
                                 <h1>Marlon Falcón</h1>
-                                <h4 style="color:#fff;">¿En busca de un Desarrollador de Odoo ERP</h4>
-                                <h4 style="color:#fff;">en Valencia, Madrid o Barcelona?</h4>
+                                <h4 style="color:#fff;">¿En busca de un Desarrollador / Implementador de Odoo ERP</h4>
+                                <h4 style="color:#fff;">para tu equipo en Valencia, Madrid o Barcelona?</h4>
                                 <h4>Busco salario entre <b style="color:#d7dde9;">50.000-65.000 €</b> Año.</h4>
 
                                 <ul>
@@ -137,8 +141,15 @@
         <!-- PAGE CONTENT -->
         <div id="page-content">
 
+
+
+
+
             <section class="full-section" id="section-13">
                 <div class="full-section-container">
+
+
+
 
                     <div class="container-fluid">
                         <div class="row">
@@ -481,6 +492,24 @@
 
                                                 </div><!-- progress-bar-container -->
 
+                                                <div class="progress-bar-container">
+                                                    <div class="progress">
+                                                        <div class="progress-bar" data-width="85">
+                                                            <span>70%</span>
+                                                        </div><!-- progress-bar -->
+                                                    </div><!-- progress -->
+                                                    <div class="progress-bar-title">Linux (Ubuntu)</div>
+                                                </div><!-- progress-bar-container -->
+
+                                                <div class="progress-bar-container">
+                                                    <div class="progress">
+                                                        <div class="progress-bar" data-width="85">
+                                                            <span>90%</span>
+                                                        </div><!-- progress-bar -->
+                                                    </div><!-- progress -->
+                                                    <div class="progress-bar-title">Git</div>
+                                                </div><!-- progress-bar-container -->
+
                                             </div><!-- col -->
                                         </div><!-- -row -->
 
@@ -547,6 +576,65 @@
                 </div><!-- full-section-container -->
             </section><!-- full-section -->
 
+
+            <div style="z-index:100;"
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Formulario de Contacto</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="/modal" method="post">
+                                                <div class="form-group">
+                                                    <label for="partner_name">Nombre</label>
+                                                    <input type="text" class="form-control" id="partner_name" placeholder="Nombre" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="partner_email">Correo</label>
+                                                    <input type="email" class="form-control" id="partner_email" aria-describedby="emailHelp"
+                                                        placeholder="tu.email@mail.com" />
+                                                    <small id="emailHelp" class="form-text text-muted">Nunca compartiremos su correo.</small>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="partner_city">Provincia</label>
+                                                    <select class="form-control" id="partner_city">
+                                                        <option>Madrid</option>
+                                                        <option>Barcelona</option>
+                                                        <option>Valencia</option>
+                                                        <option>Otro</option>
+                                                      </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="partner_phone">Teléfono</label>
+                                                    <input type="tel" id="partner_phone" class="form-control" placeholder="+34 555 5555 55" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="partner_message">Mensaje</label>
+                                                    <textarea class="form-control" id="partner_message"
+                                                              placeholder="Déjame Tu Mensaje"
+                                                              rows="3"></textarea>
+                                                </div>
+                                                <input type="hidden" id="csrf_token" value="{{csrf_token}}" />
+                                            </form>
+                                            <div class="alert alert-warning" style="display: none;">Enviando formulario, espere...</div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-primary">Enviar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+
+
         </div><!-- PAGE CONTENT -->
 
 
@@ -609,6 +697,86 @@
 
     <!-- CUSTOM JS -->
     <script src="theme_marlon_cv/static/assets/js/custom.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('[type="submit"]').click(function () {
+                $('#partner_name, #partner_email, #partner_message').removeClass('is-invalid');
+
+                var $submit = $(this);
+                var $alert = $('.alert');
+                var $form = $('form');
+
+                var csrf_token = $('#csrf_token').val();
+                var partner_name = $('#partner_name').val();
+                if (!partner_name) {
+                    $('#partner_name').focus().addClass('is-invalid');
+                    return;
+                }
+                var partner_email = $('#partner_email').val();
+                if (!partner_email) {
+                    $('#partner_email').focus().addClass('is-invalid');
+                    return;
+                }
+                var partner_phone = $('#partner_phone').val();
+                var partner_message = $('#partner_message').val();
+                if (!partner_message) {
+                    $('#partner_message').focus().addClass('is-invalid');
+                    return;
+                }
+
+                $.ajax({
+                    url: '/modal',
+                    method: 'post',
+                    headers: { 'Content-Type': 'application/json' },
+                    data: `{
+                        "params": {
+                            "csrt_token": "${csrf_token}",
+                            "name": "${partner_name}",
+                            "phone": "${partner_phone}",
+                            "email": "${partner_email}",
+                            "city": "${partner_city}",
+                            "message": "${partner_message}"
+                        }
+                    }`,
+                    beforeSend: function () {
+                        $form.hide();
+                        $alert.show();
+                        $submit.hide();
+                    },
+                    success: function (response) {
+                        if (response.result) {
+                            $alert.removeClass('alert-warning').addClass('alert-success')
+                                .text(`Muy bien ${response.result.name}, ¡pronto nos estaremos comunicando con usted!`);
+                        } else {
+                            $alert.removeClass('alert-warning').addClass('alert-danger')
+                                .text('Hubo un error en la solicitud con el servidor.');
+                            if (response.error) {
+                                console.log(response.error);
+                            }
+                        }
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        $alert.removeClass('alert-warning').addClass('alert-danger')
+                            .text('Hubo un error en la solicitud con el servidor.');
+                        console.error(jqXHR, textStatus, errorThrown);
+                    }
+                });
+            });
+        });
+    </script>
+
+
+    <style>
+        .modal-backdrop {
+                            /* bug fix - no overlay */
+                            display: none;
+                        }
+    </style>
 
 </body>
 

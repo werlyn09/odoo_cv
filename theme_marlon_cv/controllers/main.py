@@ -17,3 +17,28 @@ class MainController(http.Controller):
             'company_email': company.email,
             'logo': company.logo and 'data:image/png;base64,%s' % company.logo.decode()
         })
+
+    @http.route('/modal', methods=['GET'], auth='public')
+    def modal(self, **kwargs):
+        return env.get_template('modal.html').render({
+            'csrf_token': http.request.csrf_token(),
+        })
+
+    @http.route('/modal', type='json', auth='public')
+    def modal_response(self, name, phone, email, message, city, **kwargs):
+        partner = http.request.env['res.partner'].sudo().search([('email', 'ilike', email.strip())], limit=1)
+        if not partner:
+            partner = partner.sudo().create({
+                'name': name.strip(),
+                'phone': phone.strip(),
+                'email': email.strip(),
+            })
+        http.request.env['crm.lead'].sudo().create({
+            'name': '%s  <%s>' % (name.strip(), email.strip()),
+            'partner_id': partner.id,
+            'email_from': email.strip(),
+            'description': '%s  <%s>' % (message.strip(), city.strip()),
+        })
+        return {
+            'name': name,
+        }
