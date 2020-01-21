@@ -37,7 +37,7 @@ class MainController(http.Controller):
             'name': '%s  <%s>' % (name.strip(), email.strip()),
             'partner_id': partner.id,
             'email_from': email.strip(),
-            'description': '%s' % (message.strip()),
+            'description': message.strip(),
         })
         return {
             'name': name,
