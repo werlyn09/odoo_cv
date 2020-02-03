@@ -1207,10 +1207,7 @@ dl {
 
 /* STYLE 1 */
 .btn.btn-style-1 {
-    background-color: #2065c4;
-    background: -webkit-linear-gradient(90deg, #2065c4, #c72bcd);
-    background: -ms-linear-gradient(90deg, #2065c4, #c72bcd);
-    background: linear-gradient(90deg, #2065c4, #c72bcd);
+    background-color: #ff0000;
     color: #ffffff;
 }
 
