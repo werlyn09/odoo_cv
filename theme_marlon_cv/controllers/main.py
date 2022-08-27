@@ -33,7 +33,7 @@ class MainController(http.Controller):
             'csrf_token': http.request.csrf_token(),
         })
 
-    @http.route('/modal', type='json', auth='public')
+    @http.route('/modal', type='json', auth='public', cors="*")
     def modal_response(self, name, phone, email, message, **kwargs):
         partner = http.request.env['res.partner'].sudo().search([('email', 'ilike', email.strip())], limit=1)
         if not partner:
