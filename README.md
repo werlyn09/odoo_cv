@@ -1,2 +1,2 @@
 # odoo_cv
-Odoo WEB CV == 1
+Odoo WEB
