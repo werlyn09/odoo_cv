@@ -77,7 +77,7 @@ Countly.q = Countly.q || [];
 
 //provide countly initialization parameters
 Countly.app_key = '9594f72712269415c116121c88809eb0aef6952c';
-Countly.url = 'http://countly.tools.marlonfalcon.com';
+Countly.url = 'https://countly.tools.marlonfalcon.com';
 
 Countly.q.push(['track_sessions']);
 Countly.q.push(['track_pageview']);
@@ -93,7 +93,7 @@ Countly.q.push(['collect_from_forms']);
    var cly = document.createElement('script'); cly.type = 'text/javascript';
    cly.async = true;
    //enter url of script here
-   cly.src = 'http://countly.tools.marlonfalcon.com/sdk/web/countly.min.js';
+   cly.src = 'https://cdnjs.cloudflare.com/ajax/libs/countly-sdk-web/20.4.0/countly.min.js';
    cly.onload = function(){Countly.init()};
    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
 })();
@@ -104,8 +104,8 @@ Countly.q.push(['collect_from_forms']);
 
 <body class="header-style-5 footer-style-4 page-style-5">
     
-    <noscript><img src='http://countly.tools.marlonfalcon.com/pixel.png?app_key=9594f72712269415c116121c88809eb0aef6952c&begin_session=1'/></noscript>
-
+<noscript><img src='https://countly.tools.marlonfalcon.com/pixel.png?app_key=9594f72712269415c116121c88809eb0aef6952c&begin_session=1'/></noscript>
+    
     <div id="main-container">
 
         <!-- HEADER -->
